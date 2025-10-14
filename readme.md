@@ -5,7 +5,7 @@
    📄Desenvolvido com HTML, CSS e JS.👨‍💻
     
     
-[<img src="./SRC/imagens/gif-portifolioAJ.gif">]
+[<img src="./SRC/imagens/R10.webp">]
 
  
 ✅HTML -> adicionado Div's com as classes para os projetos Ativos e os ocultos ao final um botão onde será adicionado função para mostrar os projetos ocultos .
