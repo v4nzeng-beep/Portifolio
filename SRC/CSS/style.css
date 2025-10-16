@@ -1,117 +1,148 @@
+/* ================================================= */
+/* GLOBAL E CORPO - Limpeza do Fundo e Cores         */
+/* ================================================= */
+
 html {
-    color: #ffffff;
+    /* Cor de texto global alterada para um cinza mais suave, mas branco no fundo preto é comum. Vou manter branco para contraste. */
+    color: #FFFFFF; 
     scroll-behavior: smooth;
+    /* Fonte mais limpa para o corpo */
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    font-family: "poppins", sans-serif;
     margin: 0 auto;
     max-width: 1120px;
-    background: linear-gradient(150deg, #000000, #19191a, #868686c6);
-    background-size: 120% 120%;
+    /* Fundo Sólido e Limpo - O gradiente animado é muito "artístico". Usaremos um preto/cinza escuro sólido. */
+    background: #0F0F0F; 
 }
+
+
+/* ================================================= */
+/* CABEÇALHO E NAVEGAÇÃO - Formalidade              */
+/* ================================================= */
 
 .cabecalho {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 15px;
+    padding: 25px 15px; /* Ligeiramente menos padding */
+    border-bottom: 1px solid #222222; /* Linha sutil para separar do corpo */
 }
 
 .cabecalho .logo {
-    background-color: #0a26c8d3;
-    width: 65px;
-    height: 65px;
+    /* Simplificando o logo: Tiramos a cor vibrante, borda grossa e o sublinhado. */
+    background-color: transparent; 
+    width: 50px; /* Reduzindo o tamanho */
+    height: 50px; 
     border-radius: 50%;
-    border: 2px solid #ffffff;
-    text-decoration:underline;
-    text-align:center;
-    line-height: 55px;
-
-    font-family: "Raleway", sans-serif;
-    transition: 0,2s;
+    border: 2px solid #066DF5; /* Borda Azul Elétrica */
+    text-decoration: none; /* Sublinhado removido */
+    text-align: center;
+    line-height: 46px; /* Ajuste para centralizar o texto no novo tamanho */
+    font-size: 20px; /* Tamanho do texto no logo */
+    font-family: 'Raleway', sans-serif;
+    color: #FFFFFF; /* Cor do texto no logo */
+    transition: 0.2s;
 }
 
 .cabecalho a:hover .logo {
-    background-color: rgb(26, 23, 23);
-    color: #ffffff;
-    border: 2px solid #ffffff;
-    box-shadow: #ffffff 0px 0px 10px;
+    background-color: #066DF5; /* Fundo azul no hover */
+    color: #0F0F0F; /* Texto escuro no hover */
+    border: 2px solid #066DF5;
+    box-shadow: #066DF5 0px 0px 10px; /* Efeito de "brilho elétrico" sutil */
+}
+
+/* Links da Navegação: De botões "pill" para links minimalistas */
+.cabecalho .menu {
+    display: flex;
+    gap: 20px;
 }
 
 .cabecalho .menu li a {
-    background-color: #182cc0;
-    border: #ffffff 2px solid;
-    text-transform: capitalize;
-    border-radius: 25px;
-    padding: 10px 20px;
+    background-color: transparent; /* Remove o fundo de botão */
+    border: none; /* Remove a borda de botão */
+    color: #AAAAAA; /* Cor mais suave para links em repouso */
+    text-transform: uppercase;
+    padding: 5px 10px;
+    font-weight: 500;
     transition: 0.2s;
 }
 
 .cabecalho .menu li a:hover {
-    background-color: rgb(42, 37, 37);
-    color: #ffffff;
-    border: #ffffff 2px solid;
-    box-shadow: #ffffff 0px 0px 10px;
-    transform: scale(1.1);
+    background-color: transparent;
+    color: #FFFFFF; /* Foco em branco no hover */
+    /* Linha sutil embaixo do link, mais profissional que o 'box-shadow' */
+    border-bottom: 2px solid #066DF5; 
+    box-shadow: none;
+    transform: none; /* Remove o 'scale' que é menos minimalista */
 }
+
+/* ================================================= */
+/* HOME/HERO - Foco na Informação                     */
+/* ================================================= */
 
 .home {
     display: flex;
-    min-height: calc(100vh - 125px); 
+    min-height: calc(100vh - 100px); /* Ajustado para o novo header */
     align-items: center;
     gap: 50px;
     justify-content: space-between;
+    padding-top: 50px;
 }
 
 .home .informacoes {
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    letter-spacing: 2px;
+    gap: 20px; /* Mais espaço entre os elementos */
+    letter-spacing: normal; /* Remove letter-spacing para mais legibilidade */
     padding: 0 15px;
-    max-width: 50%;
+    max-width: 55%; /* Ligeiramente mais espaço para o texto */
 }
 
 .home .informacoes h1 {
-    font-family: "Raleway", sans-serif;
-    font-size: 45px;
-    margin-bottom: 20px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 52px; /* Aumenta um pouco o tamanho */
+    line-height: 1.2; /* Melhora a leitura */
+    margin-bottom: 10px;
+    /* Destaque profissional com a cor principal */
+    color: #066DF5; 
 }
 
 .home .informacoes p {
-    font-family: "Raleway", sans-serif;
-    font-size: 24px;
-    margin-bottom: 10px;
-    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px; /* Texto mais padrão */
+    line-height: 1.6;
+    color: #AAAAAA;
+    margin-bottom: 0;
 }
 
+/* Ícones Sociais */
 .home .redes-sociais {
-    display: flex;
-    gap: 20px;
+    gap: 15px; /* Reduz o gap */
 }
     
 .home .redes-sociais a i{
-    border: 1px solid #f9f9f9;
+    border: 1px solid #AAAAAA; /* Borda cinza suave */
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    padding: 11px;
-    text-align: center;
-    font-size: 26px;
-    transition: 0.3s;
+    width: 40px; /* Reduzindo o tamanho do ícone */
+    height: 40px;
+    padding: 8px; /* Ajuste no padding */
+    font-size: 20px;
+    color: #AAAAAA;
 }
 
 .home .redes-sociais a i:hover {
-    color: #066df5;
-    border: 1px solid #066df5;
-    transform: scale(1.1);
+    color: #066DF5;
+    border: 1px solid #066DF5;
+    transform: scale(1.05); /* Efeito sutil */
 }
 
-.home .container-foto .foto {
-    /* background-color: rgb(0, 0, 0); */
-    max-width: 450%;
-    border-radius: 50%;
+/* Foto do Perfil - Remoção de Estilos Excessivos */
+.home .container-foto {
+    max-width: 45%; 
+    display: flex; 
+    justify-content: center;
 }
 
 .home .container-foto img {
@@ -119,113 +150,103 @@ body {
     border-radius: 50%;
 }
 
-.home .foto.sombra-interna{
-    background: linear-gradient(to right, #000000, #030437, #1a2680);
-    box-shadow: rgb(32, 32, 193) 0px 0px 10px;
-    background-size: 180% 180%;
- animation: gradient-animation 5s ease infinite;
+/* Removendo a animação e gradiente da foto para um visual mais clean */
+.home .foto.sombra-interna {
+    background: transparent; 
+    box-shadow: none;
+    /* Apenas uma borda azul suave para dar destaque profissional */
+    border: 4px solid #066DF5; 
 }
 
+/* ================================================= */
+/* PROJETOS - Clareza e Foco no Conteúdo             */
+/* ================================================= */
+
 .projetos {
-    padding: 70px 0 70px;
+    padding: 100px 0; /* Mais espaço vertical */
 }
 
 .projetos .titulo {
-    text-align: center;
-    padding: 60px 0;
-    font-size: 45px;
-    font-weight: 500;
-    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+    padding: 40px 0; /* Menos padding */
+    font-size: 40px; 
+    font-weight: 700;
+    color: #FFFFFF;
+    border-bottom: 2px solid #066DF5; /* Linha de destaque */
+    margin-bottom: 40px;
 }
 
 .projetos .container-projetos {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
-    justify-content: center;
+    gap: 30px; /* Mais espaço entre os cards */
+    margin-bottom: 40px;
 }
 
 .projetos .projeto{
-    max-width: 260px;
-    max-height: 500px;
-    position: relative;
-    display: none;
+    max-width: 300px; /* Aumenta o tamanho do card */
+    max-height: auto;
+    border: 1px solid #222222; /* Borda sutil para separar */
+    transition: box-shadow 0.3s;
 }
 
-.projetos .projeto.ativo {
-    display: block;
+/* Efeito Hover no Projeto: Sombra de destaque (como um componente ligado) */
+.projetos .projeto:hover {
+    box-shadow: 0px 0px 15px rgba(6, 109, 245, 0.4); /* Brilho azul no hover */
 }
 
 .projetos .projeto img {
-    height: 100;
+    width: 100%; /* Garante que a imagem preencha o card */
+    height: auto;
 }
 
+/* Título sempre visível, com fundo sólido */
 .projetos .projeto h3{
-    background-color: #040203;
-    width: 100%;
-    padding-left: 20px;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    position: absolute;
-    bottom: 0;
+    background-color: #1A1A1A; 
+    padding: 15px 20px;
+    position: static; /* Título volta a ser parte do fluxo normal */
+    font-size: 18px;
+    font-weight: 600;
 }
 
+/* Infos do Projeto: Aparece no hover, mas de forma mais sutil */
 .projetos .projeto .informacoes-projeto {
-    background-color: #040203;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    font-weight: 600;
+    background-color: #0F0F0F; /* Fundo escuro */
+    font-weight: 400; /* Texto mais leve */
     opacity: 0;
-    transition: 0.3s;
     padding: 20px;
+    color: #AAAAAA;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza verticalmente o texto */
+    text-align: center;
 }
 
 .projetos .container-projetos .projeto:hover .informacoes-projeto{
-    opacity: 0.7;
-    background-color: #000;
+    opacity: 0.9; /* Opacidade alta, mas ainda revela a imagem */
+    background-color: #0F0F0F; 
 }
 
+/* Botão "Mostrar Mais" */
 .projetos .btn-mostrar-projeto{
-    background: none;
-    border: 1px solid #ffffff;
-    border-radius: 15px;
-    color: #ffffff;
-    width: 180px;
-    height: 30px;
-    size: 18px;
+    border: 2px solid #066DF5; /* Borda azul elétrica */
+    border-radius: 4px; /* Borda mais quadrada, mais técnica */
+    color: #066DF5;
+    width: 200px;
+    height: 45px;
+    font-size: 16px;
     font-weight: 600;
-    margin: 0 auto;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: 0.3s;
+    padding: 0; /* Remove padding desnecessário */
 } 
 
 .projetos .btn-mostrar-projeto:hover {
-background-color: #000000;
-transition: 0.3s;
-color: #ffffff;
-border: #ffffff solid 2px;
-box-shadow: #ffffff 0px 0px 10px;
+    background-color: #066DF5; /* Fundo azul no hover */
+    color: #FFFFFF; /* Texto branco no hover */
+    border: 2px solid #066DF5;
+    box-shadow: 0px 0px 10px rgba(6, 109, 245, 0.5); /* Brilho suave */
+    transform: none; /* Remove transform */
 }
 
-.projetos .btn-mostrar-projeto.remover {
-    display: none;
-}
-
+/* Remove a animação de gradiente, que não é necessária */
 @keyframes gradient-animation {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
+    0% {}
+    100% {}
 }
