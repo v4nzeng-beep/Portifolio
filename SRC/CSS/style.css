@@ -47,10 +47,10 @@ body {
 }
 
 .cabecalho a:hover .logo {
-    background-color: #000000; /* Fundo azul no hover */
+    background-color: #066DF5; /* Fundo azul no hover */
     color: #0F0F0F; /* Texto escuro no hover */
-    border: 2px solid #000000;
-    box-shadow: #000000 0px 0px 10px; /* Efeito de "brilho elétrico" sutil */
+    border: 2px solid #066DF5;
+    box-shadow: #066DF5 0px 0px 10px; /* Efeito de "brilho elétrico" sutil */
 }
 
 /* Links da Navegação: De botões "pill" para links minimalistas */
@@ -155,7 +155,7 @@ body {
     background: transparent; 
     box-shadow: none;
     /* Apenas uma borda azul suave para dar destaque profissional */
-    border: 4px solid #eeeeee; 
+    border: 4px solid #066DF5; 
 }
 
 /* ================================================= */
@@ -190,7 +190,7 @@ body {
 
 /* Efeito Hover no Projeto: Sombra de destaque (como um componente ligado) */
 .projetos .projeto:hover {
-    box-shadow: 0px 0px 15px rgba(238, 238, 238, 0.4); /* Brilho azul no hover */
+    box-shadow: 0px 0px 15px rgba(6, 109, 245, 0.4); /* Brilho azul no hover */
 }
 
 .projetos .projeto img {
